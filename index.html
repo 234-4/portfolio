@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Ali</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="script.js"></script>
+    
+    <style>
+        :root {
+            --primary-color: #1e90ff;
+            --secondary-color: #1e90ff;
+            --background-color: #f4f4f4;
+            --text-color: #0c0c0c;
+            --white: #fff;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--background-color);
+            color: var(--text-color);
+           
+
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background: var(--primary-color);
+            margin: auto;
+            padding: 10px;
+            color: var(--white);
+            
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+
+        nav img {
+            height:60px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap:20px;
+            
+        }
+        .nav-links li a {
+            color: var(--white);
+            text-decoration: none;
+
+        }
+            
+        .nav-links  li a:hover {
+            color: #ffcc00;
+        }
+        
+
+                
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+        .banner-header img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+            banner-header {
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .banner-header {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        section {
+            padding: 50px;
+            background: var(--secondary-color);
+            margin:10px;
+            border-radius: 10px;
+            ox-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+        }
+        h2 {
+            color: var(--white);
+        }
+        h3 {
+            color: var(--text-color)
+        }
+        .gallery {
+            display: flex;
+            gap: 100px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 100%;
+            max-width:800px;
+            height: auto;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .blog-post {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background: var(--background-color);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  
+        
+        }
+
+        .blog-post img {
+            width: 100%; /* Make it responsive */
+            max-width: 600px; /* Limit maximum size */
+            height: auto;
+            display: block;
+            margin: 10px auto; /* Center the image */
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+            background: var(--background-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea, button {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid var(--text-color);
+            border-radius: 5px;
+        }
+        button {
+            background: var(--primary-color);
+            color: var(--white);
+            cursor: pointer;
+            border: none;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: var(--primary-color);
+            color: var(--white);
+            margin-top: 20px;
+            justify-content: center;
+            
+        }
+        footer {
+    background-color: #1e90ff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.quick-links h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}    
+
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links ul li {
+    margin: 5px 0;
+}
+
+.quick-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    
+}
+
+.quick-links ul li a:hover {
+    color: #ffcc00;
+}
+@media (max-width: 600px) {
+    .footer-container {
+        padding: 0 20px;
+    }
+}
+
+social-links ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.social-links ul li {
+    list-style: none;
+ 
+}
+
+.social-links ul li a {
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-links ul li a:hover {
+    color: #ffcc00;
+}
+.quick-links ul,
+    .social-links ul {
+
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+            <img src="logo.jpg" alt="Roshan Ali">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+     <img src="Graphic.jpg">
+
+    </header>
+    
+    <section id="home" class="hero">
+        <h1>Welcome to Roshan Ali</h1>
+        <p>I'm a Graphic Designer, check out my work!</p>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a creative graphic designer with expertise in hand sketching and digital design.</p>
+    </section>
+    
+    <section id="portfolio">
+        <h2>My Project</h2>
+        <div class="gallery">
+            <img src="product.jpg" alt="product1">
+            <img src="logo .jpg" alt="logo">
+            <img src="final-product.png" alt="product">
+        </div>
+    </section>
+    
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="blog-post">
+            <h3>The Role of AI in Graphic Designing </h3>
+            <img src="image.png" alt="Ai in graphic design">
+            <p><h3>Introduction</h3><br>
+                Brief overview of AI and its growing influence in various industries.
+                Introduction to the field of graphic designing and its importance in visual communication.
+                <h3>AI Tools and Technologies in Graphic Designing</h3> <br>
+                Description of AI-powered tools like Adobe Sensei, Canva's AI features, and DeepArt.
+                Explanation of how these tools assist designers in creating more efficient and innovative designs.
+                <h3>Enhancing Creativity and Efficiency</h3><br>
+                Discussion on how AI helps in automating repetitive tasks, allowing designers to focus on creativity.
+                Examples of AI generating design suggestions, color palettes, and layouts based on user preferences.
+                <h3>Personalization and Customization</h3><br>
+                How AI enables personalized design experiences by analyzing user data and preferences.
+                Case studies of brands using AI to create customized marketing materials and advertisements.
+                <h3>Improving Design Quality</h3><br>
+                AI's role in enhancing the quality of designs through features like image recognition and enhancement.
+                Examples of AI correcting design flaws and optimizing visual elements for better aesthetics.
+                <h3>Challenges and Ethical Considerations</h3><br>
+                Potential challenges faced by designers in integrating AI into their workflow.
+                Ethical considerations regarding AI-generated designs and the importance of human oversight.
+                <h3>Future Prospects</h3><br>
+                Predictions on the future of AI in graphic designing and emerging trends.
+                The potential for AI to revolutionize the industry and create new opportunities for designers.
+                <h3>Conclusion<br>
+                Summary of the key points discussed in the article.
+                Final thoughts on the symbiotic relationship between AI and graphic design.
+                </p>
+        </div>
+        <div class="blog-post">
+            <h3>The Rise of AI Agents: Transforming the Future of Automation</h3>
+            <p>
+
+                <h3>Introduction</h3><br>
+                
+                Artificial intelligence (AI) has rapidly evolved over the past decade, reshaping industries and changing the way businesses operate. Among the most significant advancements in AI is the development of AI agents. These intelligent systems are designed to perform tasks autonomously, adapt to new environments, and make decisions with minimal human intervention. From customer service chatbots to autonomous trading systems, AI agents are becoming an integral part of modern technological ecosystems.
+                
+                <h3>What Are AI Agents?</h3><br>
+                
+                AI agents are software programs that use machine learning (ML), natural language processing (NLP), and advanced algorithms to perform specific tasks. They can be classified into different categories based on their complexity and level of autonomy:
+                
+                Reactive Agents: These follow predefined rules and react to stimuli without learning from past experiences. Example: Simple chatbots.
+                
+                Proactive Agents: These can learn from past interactions and adapt their behavior accordingly. Example: AI-driven recommendation systems.
+                
+                Autonomous Agents: These agents can function with little to no human input, making real-time decisions based on data analysis. Example: Self-driving car AI.
+                
+                
+                <h3>Trending Applications of AI Agents</h3><br>
+                
+                The application of AI agents is rapidly expanding across various sectors, including business, healthcare, finance, and entertainment. Here are some of the most trending AI agent applications:
+                
+                <h3>1. AI Agents in Customer Service</h3><br>
+                
+                One of the most popular applications of AI agents is in customer support. AI-powered chatbots and virtual assistants, such as ChatGPT and Google's Bard, are being deployed by companies to handle inquiries, automate responses, and improve customer satisfaction. These AI agents can understand natural language, detect customer sentiment, and provide personalized solutions, reducing the need for human intervention.
+                
+                <h3>2. AI Agents in Finance and Trading</h3><br>
+                
+                The finance sector has embraced AI agents for automated trading, fraud detection, and financial advisory services. AI-driven trading bots analyze massive amounts of market data in real time to make profitable trades. AI agents also assist in risk management by identifying suspicious transactions and preventing financial fraud.
+                
+                <h3>3. AI Agents in Healthcare</h3><br>
+                
+                In healthcare, AI agents are revolutionizing diagnostics, drug discovery, and patient care. AI-powered systems like IBM Watson Health analyze medical records, suggest treatments, and even predict disease outbreaks. AI agents also help streamline hospital operations by managing appointments, assisting in surgeries, and monitoring patient vitals in real time.
+                
+                <h3>4. AI Agents in Content Creation</h3><br>
+                
+                AI-driven tools such as OpenAI’s DALL·E, Midjourney, and ChatGPT are reshaping content creation by generating high-quality text, images, and even videos. These AI agents assist marketers, writers, and designers in automating content production while maintaining creativity and relevance.
+                
+                <h3>5. AI Agents in Smart Homes and IoT</h3><br>
+                
+                Smart home devices and the Internet of Things (IoT) have greatly benefited from AI agents. Virtual assistants like Amazon Alexa, Google Assistant, and Apple’s Siri are AI agents that help users control smart appliances, set reminders, and answer queries using voice commands. These agents are becoming more intelligent, capable of learning user preferences and automating home tasks.
+                
+                <h3>6. AI Agents in Autonomous Vehicles</h3><br>
+                
+                Self-driving cars rely heavily on AI agents to process sensor data, detect obstacles, and make split-second driving decisions. Companies like Tesla, Waymo, and NVIDIA are continuously improving their autonomous driving AI systems, making transportation safer and more efficient.
+                
+                <h3>Emerging Trends in AI Agents</h3><br>
+                
+                The rapid evolution of AI agents is leading to several key trends that are shaping the future of automation:
+                
+                <h3>1. Multi-Agent Systems (MAS)</h3><br>
+                
+                Multi-agent systems involve multiple AI agents working collaboratively to solve complex problems. These systems are used in supply chain management, robotic process automation, and swarm robotics, where multiple autonomous agents work together to achieve a common goal.
+                
+                <h3>2. Conversational AI with Emotional Intelligence</h3><br>
+                
+                Future AI agents are being developed to recognize and respond to human emotions using advanced sentiment analysis. This will enable AI-powered customer service bots and virtual assistants to offer more empathetic and personalized interactions.
+                
+                <h3>3. Explainable AI (XAI) Agents</h3><br>
+                
+                One major challenge with AI agents is the “black box” problem, where decisions made by AI are not easily explainable. Explainable AI (XAI) aims to make AI agents more transparent and accountable by providing insights into their decision-making processes. This is particularly important in sectors like healthcare and finance, where AI decisions must be justified.
+                
+                <h3>4. AI-Powered Personal Assistants for Businesses</h3><br>
+                
+                AI agents are not just limited to consumers; businesses are increasingly adopting AI-powered personal assistants to manage tasks such as scheduling, data analysis, and project management. AI agents like ChatGPT Enterprise and Microsoft Copilot help organizations streamline workflows and enhance productivity.
+                
+                <h3>5. AI Agents in the Metaverse and Virtual Worlds</h3><br>
+                
+                With the rise of the metaverse, AI agents are being developed to populate virtual environments, acting as NPCs (non-playable characters) in games and digital avatars in virtual meetings. These AI-driven avatars enhance user experience by interacting naturally and adapting to user behavior.
+                
+                <h3>Challenges and Ethical Considerations</h3><br>
+                
+                While AI agents bring numerous benefits, they also present several challenges and ethical concerns that must be addressed:
+                
+                <h3>1. Bias and Fairness</h3><br>
+                
+                AI agents can inherit biases from the data they are trained on, leading to unfair outcomes in decision-making processes. Companies must ensure their AI models are trained on diverse and unbiased datasets.
+                
+                <h3>2. Security and Privacy Risks</h3><br>
+                
+                AI agents handle vast amounts of sensitive data, making them prime targets for cyberattacks. Strong security measures, encryption protocols, and AI ethics guidelines must be implemented to protect user data.
+                
+                <h3>3. Job Displacement</h3><br>
+                
+                As AI agents become more advanced, there is growing concern about job displacement in industries that heavily rely on automation. It is crucial to focus on reskilling and upskilling workers to adapt to an AI-driven job market.
+                
+                <h3>4. Regulation and Accountability</h3><br>
+                
+                The widespread use of AI agents calls for strict regulations to ensure responsible AI deployment. Governments and organizations need to establish policies that hold AI developers accountable for any unintended consequences caused by AI decisions.
+                
+                <h3>Conclusion</h3><br>
+                
+                AI agents are rapidly transforming industries, making processes more efficient, and enhancing user experiences. As advancements in machine learning, natural language processing, and autonomous decision-making continue, AI agents will play an even greater role in shaping the future of automation. However, with great power comes great responsibility. Addressing ethical concerns, ensuring data security, and promoting AI transparency will be crucial for maximizing the benefits of AI agents while mitigating risks. The future of AI agents is undoubtedly exciting, and as technology evolves, we can expect to see even more groundbreaking innovations in this space.
+                </p>
+        </div>
+          
+      
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        
+        </form>
+        <form action="https://formspree.io/f/mzzeawyn" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-links">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/realdesign22" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://x.com/roshan40pk" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://www.instagram.com/roshan40pk" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/roshan40pk" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    
+    <footer>
+        <p>&copy; 2025 Roshan Ali. All rights reserved.</p>
+    </footer>
+</body>
+</html>
