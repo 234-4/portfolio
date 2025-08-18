@@ -7,14 +7,13 @@
     <title>Roshan Ali</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script defer src="script.js"></script>
+    
     
     <style>
         :root {
-            --primary-color: #1e90ff;
-            --secondary-color: #1e90ff;
+            --primary-color: #2c3035;
+            --secondary-color: #2c3035;
             --background-color: #f4f4f4;
-            --text-color: #0c0c0c;
             --white: #fff;
         }
         body {
@@ -50,12 +49,14 @@
         .nav-links {
             list-style: none;
             display: flex;
-            gap:20px;
+            gap: 20px;
             
         }
         .nav-links li a {
             color: var(--white);
             text-decoration: none;
+            margin-right: 20px;
+         
 
         }
             
@@ -77,10 +78,7 @@
             object-fit: cover;
         }
 
-            banner-header {
-            max-width: 100%;
-            overflow: hidden;
-        }
+            
 
         .banner-header {
             display: flex;
@@ -97,6 +95,7 @@
         }
         h2 {
             color: var(--white);
+            text-align: center;
         }
         h3 {
             color: var(--text-color)
@@ -124,6 +123,23 @@
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  
         
         }
+        #about{
+        color:var(--white);
+        text-align: center;
+        
+    }
+    #portfolio{
+        color:var(--white);
+        text-align: center;
+        
+    }
+    #blog{
+        color:var(--primary-color)
+        text-align: center;
+        
+    }
+    
+
 
         .blog-post img {
             width: 100%; /* Make it responsive */
@@ -159,31 +175,38 @@
             border: none;
         }
         footer {
+            display: flex;
             text-align: center;
             padding: 10px;
             background: var(--primary-color);
             color: var(--white);
-            margin-top: 20px;
+            margin-top: 20px 0;
             justify-content: center;
             
         }
-        footer {
-    background-color: #1e90ff;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    justify-content: center;
     
-}
+    
+
 
 .footer-container {
     max-width: 1200px;
     margin: auto;
 }
+.social-links{
+    display: flex;
+    align-content: center;
+    margin-right: 150px;
+    background: var(--background-color);
+    
+}
+h4{
+    color: var(--primary-color);
+}
 
 .quick-links h3 {
     font-size: 20px;
     margin-bottom: 10px;
+    display: flex;
 
 }    
 
@@ -207,41 +230,77 @@
 .quick-links ul li a:hover {
     color: #ffcc00;
 }
-@media (max-width: 600px) {
-    .footer-container {
-        padding: 0 20px;
+/* Responsive Design */
+
+/* Large screens (Desktops) */
+@media only screen and (min-width: 1200px) {
+    nav {
+        justify-content: space-between;
+    }
+    .gallery img {
+        max-width: 400px;
     }
 }
 
-social-links ul {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-}
-
-.social-links ul li {
-    list-style: none;
- 
-}
-
-.social-links ul li a {
-    color: white;
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-.social-links ul li a:hover {
-    color: #ffcc00;
-}
-.quick-links ul,
-    .social-links ul {
-
-        display: flex;
-        justify-content: center;
+/* Tablets and small desktops */
+@media only screen and (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
     }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    .gallery {
+        gap: 30px;
+    }
+}
 
+/* Mobile Devices */
+@media only screen and (max-width: 768px) {
+    nav img {
+        height: 40px;
+    }
+    .hero {
+        padding: 30px 20px;
+    }
+    .gallery img {
+        max-width: 100%;
+    }
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+    section {
+        padding: 30px 15px;
+        margin: 10px;
+    }
+    footer {
+        padding: 15px;
+    }
+}
 
+/* Extra small devices (Phones) */
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    nav .nav-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .gallery {
+        gap: 15px;
+    }
+    .blog-post img {
+        max-width: 100%;
+    }
+}
 
 
 </style>
@@ -250,7 +309,7 @@ social-links ul {
     <header>
         <nav>
             <div class="logo">
-            <img src="logo.jpg" alt="Roshan Ali">
+            <img src="logo.png" alt="Roshan Ali">
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -260,19 +319,19 @@ social-links ul {
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        
-     <img src="Graphic.jpg">
-
+       <div class="banner">
+     <img src="banner3.jpg" alt="header">
+     </div>
     </header>
     
     <section id="home" class="hero">
         <h1>Welcome to Roshan Ali</h1>
-        <p>I'm a Graphic Designer, check out my work!</p>
+        
     </section>
     
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm a creative graphic designer with expertise in hand sketching and digital design.</p>
+        <p>Hi! I’m Roshan Ali, a creative mind who loves turning ideas into eye-catching designs. Whether it’s logos, social media graphics, or complete branding, I bring fresh concepts and vibrant visuals that make your brand stand out. Let’s create something amazing together!</p>
     </section>
     
     <section id="portfolio">
@@ -288,7 +347,7 @@ social-links ul {
         <h2>Blog</h2>
         <div class="blog-post">
             <h3>The Role of AI in Graphic Designing </h3>
-            <img src="image.png" alt="Ai in graphic design">
+            
             <p><h3>Introduction</h3><br>
                 Brief overview of AI and its growing influence in various industries.
                 Introduction to the field of graphic designing and its importance in visual communication.
@@ -441,7 +500,7 @@ social-links ul {
             </div>
         </div>
         <div class="social-links">
-            <h3>Follow Us</h3>
+            <h4>Follow Us</h4>
             <ul>
                 <li><a href="https://www.facebook.com/realdesign22" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
                 <li><a href="https://x.com/roshan40pk" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
@@ -456,5 +515,6 @@ social-links ul {
     <footer>
         <p>&copy; 2025 Roshan Ali. All rights reserved.</p>
     </footer>
+    <script defer src="script.js"></script>
 </body>
 </html>
