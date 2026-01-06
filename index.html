@@ -289,24 +289,111 @@
         max-width: 100%;
     }
 }
+/* ===== HAMBURGER ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+}
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: #2c3035;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: 0.4s ease;
+    z-index: 9999;
+}
+
+.mobile-menu nav a {
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    margin: 12px 0;
+}
+
+.mobile-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVE SWITCH ===== */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
 
 
 </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-            <img src="assets/logo.png" alt="Roshan Ali">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+       <nav class="main-nav">
+    <div class="logo">
+        <img src="assets/logo.png" alt="Roshan Ali">
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="nav-links desktop-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Hamburger (Mobile Only) -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+<!-- Mobile Full Screen Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" id="closeMenu">✕</div>
+
+    <img src="assets/logo.png" class="mobile-logo" alt="Roshan Ali">
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
+
         <div class="header">
      <img src="assets/banner.webp" alt="header"fetchpriority="high">
 </div>
@@ -509,5 +596,25 @@
         </div>
     
     <script defer src="script.js"></script>
+    <script>
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+hamburger.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+});
+
+closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+});
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+    });
+});
+</script>
+
 </body>
 </html>
