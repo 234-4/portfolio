@@ -565,5 +565,22 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
 });
 </script>
 
+    <script>
+// Smooth scroll for desktop menu anchors
+document.querySelectorAll('.desktop-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default jump
+        const targetId = this.getAttribute('href').split('#')[1];
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+</script>
+const offset = 60; // height of your fixed nav
+targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.scrollBy(0, -offset);
+
 </body>
 </html>
