@@ -7,7 +7,11 @@
     <lastmod>2026-04-14</lastmod>
     <priority>1.0</priority>
   </url>
-
+ <url>
+    <loc>https://www.roshanali.services/home</loc>
+    <lastmod>2026-04-14</lastmod>
+    <priority>0.3</priority>
+  </url>
   <!-- About -->
   <url>
     <loc>https://www.roshanali.services/about</loc>
@@ -43,10 +47,6 @@
   </url>
 
   <!-- Privacy Policy -->
-  <url>
-    <loc>https://www.roshanali.services/privacy-policy</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.3</priority>
-  </url>
+ 
 
 </urlset>
