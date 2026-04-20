@@ -7,11 +7,7 @@
     <lastmod>2026-04-14</lastmod>
     <priority>1.0</priority>
   </url>
- <url>
-    <loc>https://www.roshanali.services/home</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.3</priority>
-  </url>
+
   <!-- About -->
   <url>
     <loc>https://www.roshanali.services/about</loc>
@@ -30,13 +26,6 @@
     <loc>https://www.roshanali.services/portfolio</loc>
     <lastmod>2026-04-14</lastmod>
     <priority>0.9</priority>
-  </url>
-
-  <!-- Blog -->
-  <url>
-    <loc>https://www.roshanali.services/blog</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
   </url>
 
   <!-- Contact -->
