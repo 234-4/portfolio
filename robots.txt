@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.roshanali.services/sitemap.xml
+Sitemap: https://www.roshanali.com/sitemap.xml
