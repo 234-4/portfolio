@@ -170,6 +170,27 @@
             color: #ffcc00;
         }
         
+/* Social icons in navbar */
+        .nav-social {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: 16px;
+        }
+        .nav-social a, .mobile-social a, .social-icons a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s ease, transform 0.12s ease;
+        }
+        .nav-social a:hover, .mobile-social a:hover, .social-icons a:hover {
+            color: #ffcc00;
+            transform: translateY(-2px);
+        }
 
                 
         .hero {
@@ -417,6 +438,29 @@
     z-index: 9999;
 }
 
+/* Mobile social layout (stacked below menu links) */
+.mobile-menu nav .mobile-social {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.mobile-social a {
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-social a:hover {
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
+
 .mobile-menu nav a {
     color: #fff;
     font-size: 22px;
@@ -453,7 +497,6 @@
     }
 }
 
-
 </style>
 </head>
 <body>
@@ -479,6 +522,13 @@
         <span></span>
     </div>
 </nav>
+        <!-- Social icons in navbar (desktop) -->
+    <div class="nav-social desktop-menu">
+        <a href="https://github.com/234-4" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/roshan.ali.351" target="_blank" rel="noopener noreferrer" aria-label="Visit my Facebook profile"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/roshan40pk/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+    </div>
+</nav>
 <!-- Mobile Full Screen Menu -->
 <div class="mobile-menu" id="mobileMenu">
     <div class="close-btn" id="closeMenu">✕</div>
@@ -491,6 +541,13 @@
         <a href="#portfolio">Portfolio</a>
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
+        <!-- Social icons for mobile menu -->
+        <div class="mobile-social">
+            <a href="https://github.com/234-4" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/roshan.ali.351" target="_blank" rel="noopener noreferrer" aria-label="Visit my Facebook profile"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/roshan40pk/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        </div>
+    </nav>
     </nav>
 </div>
 
