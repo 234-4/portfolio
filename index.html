@@ -255,7 +255,109 @@
         #portfolio:hover{
         transform: scale(1.1);
         }
-       
+       /* Corresponding CSS Styles */
+.projects-section {
+  padding: 80px 20px;
+  background-color: var(--bg-secondary, #f9fafb);
+}
+
+.projects-section h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.project-desc {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-stack span {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 9999px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+        .project-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background-color: #f3f4f6; /* Fallback background while image loads */
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
         #blog{
         color:var(--primary-color)
         text-align: center;
@@ -586,7 +688,61 @@
             
         </div>
     </section>
-    
+    <!-- Projects Section -->
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2>Featured Projects</h2>
+    <p class="section-subtitle">Web utilities and performance-focused tools.</p>
+
+    <div class="project-grid">
+      
+      <!-- Project 1: ImgCompressor -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="placeholder-img1.jpg" alt="ImgCompressor preview thumbnail" loading="lazy">
+        </div>
+        <div class="project-content">
+          <h3>ImgCompressor</h3>
+          <p class="project-desc">
+            A fast, client-side web application designed to compress and optimize images directly in the browser, reducing file sizes without sacrificing quality.
+          </p>
+          <div class="tech-stack">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Vercel</span>
+          </div>
+          <div class="project-links">
+            <a href="https://imgcompressor.shop" target="_blank" class="btn-primary">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: OptimizeImage -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="placeholder-img2.jpg" alt="OptimizeImage preview thumbnail" loading="lazy">
+        </div>
+        <div class="project-content">
+          <h3>OptimizeImage</h3>
+          <p class="project-desc">
+            An image optimization platform focused on converting and preparing high-performance assets for web deployment, improving overall site speed and SEO scores.
+          </p>
+          <div class="tech-stack">
+            <span>Frontend</span>
+            <span>SEO Performance</span>
+            <span>WebP Conversion</span>
+            <span>Vercel</span>
+          </div>
+          <div class="project-links">
+            <a href="https://optmizeimage.com" target="_blank" class="btn-primary">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
     <section id="blog">
         <h2>Blog</h2>
         <div class="blog-post">
